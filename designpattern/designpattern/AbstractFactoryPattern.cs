@@ -7,6 +7,12 @@ using System.Threading.Tasks;
 namespace designpattern
 {
     // https://ko.wikipedia.org/wiki/%EC%B6%94%EC%83%81_%ED%8C%A9%ED%86%A0%EB%A6%AC_%ED%8C%A8%ED%84%B4
+    public enum Appearance
+    {
+        WIN,
+        OSX
+    }
+
     interface IButton
     {
         void Paint();
@@ -17,6 +23,25 @@ namespace designpattern
         IButton CreateButton();
     }
 
+    class GUIFactory
+    {
+        public static IButton CreateButton(Appearance appearance)
+        {
+            switch(appearance)
+            {
+                case Appearance.WIN:
+                    Console.WriteLine("Make Win Button");
+                    return new WinButton();
+                case Appearance.OSX:
+                    Console.WriteLine("Make OSX Button");
+                    return new OSXButton();
+                default:
+                    throw new System.NotImplementedException();
+            }
+        }
+    }
+
+/* GUI Factory로 통합.
     class WinFactory : IGUIFactory
     {
         public IButton CreateButton()
@@ -34,6 +59,7 @@ namespace designpattern
             return new OSXButton();
         }
     }
+*/
 
     class WinButton : IButton
     {
@@ -53,15 +79,13 @@ namespace designpattern
 
     class AbstractFactoryPattern
     {
-        public enum Appearance
-        {
-            WIN,
-            OSX
-        }
         static void Main(string[] args)
         {
             var appearance = Appearance.WIN;
 
+            IButton button = GUIFactory.CreateButton(appearance);
+
+            /*
             IGUIFactory factory;
 
             switch(appearance)
@@ -77,6 +101,8 @@ namespace designpattern
             }
 
             var button = factory.CreateButton();
+            */
+
             button.Paint();
 
             Console.ReadKey();
