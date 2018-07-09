@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>designpattern.BuilderPattern</StartupObject>
+    <StartupObject>designpatternFactoryMethod.FactoryMethodPattern</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="AbstractFactoryPattern.cs" />
     <Compile Include="BuilderPattern.cs" />
+    <Compile Include="FactoryMethodPattern.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
