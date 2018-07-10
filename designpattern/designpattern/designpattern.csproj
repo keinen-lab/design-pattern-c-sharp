@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>designpattern.prototypePattern</StartupObject>
+    <StartupObject>designpattern.bridgePattern</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractFactoryPattern.cs" />
+    <Compile Include="bridgePattern.cs" />
     <Compile Include="BuilderPattern.cs" />
     <Compile Include="FactoryMethodPattern.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
