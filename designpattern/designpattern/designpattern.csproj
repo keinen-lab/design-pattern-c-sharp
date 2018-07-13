@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>designpattern.facadePattern</StartupObject>
+    <StartupObject>flyweightPattern.flyweightPattern</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -50,6 +50,7 @@
     <Compile Include="BuilderPattern.cs" />
     <Compile Include="facadePattern.cs" />
     <Compile Include="FactoryMethodPattern.cs" />
+    <Compile Include="flyweightPattern.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="prototypePattern.cs" />
   </ItemGroup>
