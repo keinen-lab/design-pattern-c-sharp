@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>proxyPattern.proxyPattern</StartupObject>
+    <StartupObject>strategyPattern.strategyPattern</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -54,6 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="prototypePattern.cs" />
     <Compile Include="proxyPattern.cs" />
+    <Compile Include="strategyPattern.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
